@@ -6,6 +6,8 @@ You are given an n x n 2D matrix representing an image, rotate the image by
 
 You have to rotate the image in-place, which means you have to modify the 
 input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+
+https://leetcode.com/problems/rotate-image/description/
 """
 
 """
@@ -13,6 +15,9 @@ I decided that it would be much easier conceptually to first change basis to
 cartesian coordinates with the origin at the center of the matrix, then find
 the given coord shifted 90 degrees, and then convert back. You can do this for all
 4 pairs in the matrix by shifting all of the upper left quadrant numbers
+
+This will be O(n^2) time and O(1) space since we are doing it in place, and only look 
+at each element once.
 """
 
 class Solution(object):

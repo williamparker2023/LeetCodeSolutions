@@ -10,6 +10,8 @@ Return the max sliding window.
 
 Basically return a new array where at every index, ans[i] is equal to the biggest
 number between nums[i] and nums[k]
+
+https://leetcode.com/problems/sliding-window-maximum/description/
 """
 
 """
@@ -21,6 +23,10 @@ the most readable.
 The idea is that we have a max heap storing all of the (nums[j], j) pairs,
 and at every index i we find the first max value in the heap such that 
 the j value associated with it is within our current i - k window.
+
+Because we go through n elements and the heap operations are log(k), the time complexity
+will be O(n log k). The space complexity is O(k) because the heap will store at most k elements
+at any time.
 """
 
 import heapq

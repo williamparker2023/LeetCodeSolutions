@@ -7,14 +7,19 @@ return the minimum window substring of s such that every character in t
 return the empty string "".
 
 The testcases will be generated such that the answer is unique.
+
+https://leetcode.com/problems/minimum-window-substring/description/
 """
 
 """
 My thought process here was that we basically just want two maps.
-One contains the required letters and there counts from t
+One contains the required letters and their counts from t
 The other contains our currents letters in the current sliding window in s
 If the tmap is contained within our current smap, then our current substring is valid
 Thus, if it's length is shorter than the current answer, make it the new current answer
+
+The time complexity here is O(m + n) because we go through s and t once each. The space complexity 
+is O(m + n) as well in the worst case because both maps could contain all unique letters from s and t.
 """
 
 class Solution(object):
